@@ -28,10 +28,20 @@ function Serie(titulo, episodios, episodiosVistos) {
 }
 
 function mostrarNoFinalizadas(arreglo){
-    arreglo.forEach(function(element){
-        if (!element.finalizada())
-        {
-            console.log(element);
-        }
+
+
+    var arrayfinal = new Array();
+    // arreglo.forEach(function(element){
+    //     if (!element.finalizada())
+    //     {
+    //         arrayfinal.push(element);
+    //     }
+    // });
+    arrayfinal = arreglo.filter(function(elem){
+        return elem.finalizada() == false;
     });
+
+    return arrayfinal
 }
+
+console.log(mostrarNoFinalizadas(arreglo));
