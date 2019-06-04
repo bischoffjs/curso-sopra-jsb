@@ -65,6 +65,59 @@ console.log(cancionBatman);
 
 ////////////
 
+//EJERCICIO 14
+
+var numeros = [1,3,4,5,7,8,4,6,15,65,12];
+
+var ej14 = numeros.map(function(num,) {
+    return num % 2 === 0 ? 'PAR' : num;
+})
+
+console.log(ej14);
+
+///////////
+
+// texto = 'Hola mundo!';
+// console.log(text.lenght);
+// console.log(texto.toUpperCase());
+// console.log(texto.replace(/o/gi, 0));
+// console.log(texto.split(' '));
+// console.log(texto.substring(3,6));
+// console.log(texto.indexOf('!'));
+// console.log(texto.indexOf('e'));
+// console.log(texto.includes('o'));
+
+
+var colores = ['amarillo', 'rojo', 'verde']
+var ultimo = colores.pop();
+var primero = colores.shift();
+console.log(ultimo, primero);
+colores.push('blanco');
+colores.unshift('azul'); // lo añade al principio en la primera posicion
+colores = colores.concat([ultimo, primero]);
+console.log(colores);
+
+var hoy = new Date();
+console.log(hoy.getFullYear());
+console.log(hoy.getDay());
+console.log(hoy.getDate());
+console.log(typeof(hoy));
+
+var angel = {nombre: 'Angel'};
+var angelJSON = JSON.stringify(angel);
+var angelJS = JSON.parse(angelJSON);
+console.log(angel);
+console.log(angelJSON);
+console.log(angelJS);
+
+
+
+
+
+
+
+
+
 
 
 
