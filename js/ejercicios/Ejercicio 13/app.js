@@ -30,7 +30,7 @@ function Serie(titulo, episodios, episodiosVistos) {
 function mostrarNoFinalizadas(arreglo){
 
 
-    var arrayfinal = new Array();
+    var arrayfinal = [];
     // arreglo.forEach(function(element){
     //     if (!element.finalizada())
     //     {
