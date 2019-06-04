@@ -4,8 +4,8 @@ const numeroTope = 20;
 iniciar();
 
 function iniciar() {
-    jugarUser()
-    jugarMaquina();
+    puntosUser = jugarUser()
+    puntosMaquina = jugarMaquina();
     validarGanador(puntosMaquina, puntosUser);
     reinicio();
 }
@@ -16,7 +16,6 @@ function getRandomNum() {
 
 function jugarUser(){
     puntosUser = 0;
-    puntosMaquina = 0;
     var resp = true;
     while (resp == true) {
         var resp = confirm('Quiere un numero?');
@@ -37,20 +36,23 @@ function jugarUser(){
 
 
     }
+    return puntosUser;
 }
 
 function jugarMaquina()
 {
+    puntosMaquina = 0;
     while (puntosMaquina <= 17) {
         var numAzar = getRandomNum()
         var puntosMaquina = puntosMaquina + numAzar;
         console.log('Puntos Maquina.: ' + puntosMaquina);
         if (puntosMaquina > numeroTope) {
             console.log('La Maquina se ha pasado de 20');
-            resp == false;
             break;
         }
     }
+
+    return puntosMaquina;
 }
 
 function validarGanador(puntosMaquina, puntosUser) {
