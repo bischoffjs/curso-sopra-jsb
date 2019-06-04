@@ -1,6 +1,6 @@
 
     iniciar();
-    function iniciar(boolean)
+    function iniciar()
     {
     var numAzar = Math.floor(Math.random()*51); 
     var turnos = 0;
