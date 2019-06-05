@@ -48,3 +48,84 @@ let doubles = [1, 2, 3, 4].map((num) => {
 })
 
 console.log(doubles);
+
+console.log('---------------------')
+
+let pelicula = {
+    titulo: 'Los vengadores',                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    setAnyoEstreno: function(anyo) {
+        this.anyoEstreno = anyo;
+        let mostrar = () => {
+            // function mostrar ()
+            console.log(this);
+        }
+        mostrar();
+    }
+}
+
+pelicula.setAnyoEstreno(2019);
+console.log(pelicula.anyoEstreno);
+
+//Rest Params 
+
+function getNumLoteria(idSorteo,...nums) 
+{
+//Todos los numeros que recibira los mete
+//en un array llamado nums 
+// al colocar como primer parametro idSorteo toma el primer numero y asi 
+// sucesivamente toma los parametros.
+console.log(nums);
+//queremos que el metodo devuelva un string separados por comas
+return `Sorteo ${idSorteo}: ${nums.join()}`;
+}
+
+let numGanador = getNumLoteria(1, 4, 24, 31, 38, 46);
+console.log(numGanador);
+
+
+//No queremos crear varios
+// getNumPrimitiva()
+// getNumEuroMillo()
+
+
+// SPREAD OPERATOR
+let telefonoDesconocido = ['+34', 677334672];
+let telefonoCharly = ['+34', 677334672, 'Charly'];
+
+function creaNumConPrefijo(prefijo, numTelf, nombre = 'Desconocido') {
+    return `${nombre} : ${prefijo} ${numTelf}`;
+}
+
+//creaNumConPrefijo(telefono[0], telefono[1]); //mODO CONVENCIONAL
+//Con Spread 
+//let resp = creaNumConPrefijo(...telefono);
+
+console.log(creaNumConPrefijo(...telefonoDesconocido));
+console.log(creaNumConPrefijo(...telefonoCharly));
+
+// DESESTRUCTURACION
+
+let serie = {
+    titulo: 'Gangland Undercover',
+    temporadas: 3,
+    episodios: 30,
+    finaliza: true
+}
+
+let {titulo, finaliza, ...restoProps} = serie;
+console.log(titulo, finaliza);
+console.log(restoProps);
+
+let mascostas = ['gato', 'perro', 'pez', 'canario'];
+
+// let gato = mascota[0]
+// let perro = mascota[1]
+// let pez = mascota[2]
+
+//let [gato, perro, pez, canario] = mascostas
+let [gato, perro, ...restoMascotas] = mascostas
+
+
+
+console.log(gato, perro);
+console.log(restoMascotas);

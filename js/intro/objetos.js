@@ -40,7 +40,7 @@ var pelicula = {
 }
 
 pelicula.setAnyEstreno(2019);
-pelicula.anyoEstreno;
+console.log(pelicula.anyoEstreno);
 
 // var serie = {
 //     titulo:'The Walking Dead',
