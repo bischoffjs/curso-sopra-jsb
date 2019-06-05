@@ -111,6 +111,51 @@ console.log(angelJSON);
 console.log(angelJS);
 
 
+//PROTOTYPE
+
+function Coche(marca, modelo, color)
+{
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        // this.pintar = (nuevoColor) => {
+        //     this.color =nuevoColor;
+        // }
+}
+
+Coche.prototype.pintar = function (nuevoColor) {
+    this.color = nuevoColor;
+}
+
+let tesla = new Coche('Tesla', 'Roadster', 'rojo');
+let audi = new Coche ('Audi','A3','negro');
+console.log(tesla);
+console.log(audi);
+
+console.log('----------------')
+//REFERENCIAS
+
+console.log('Referencias')
+
+let perro = {
+    nombre: 'Roko',
+    edad: 2
+}
+
+let perro1 = {...perro}; //*1
+perro1.edad = 3;
+console.log(perro);
+
+//Crear un nuevo objeto
+//*1 Crea un objeto igualanadolo a perro1
+let perro2 = Object.assign({}, perro);
+
+//Con los array pasaria igual
+
+let miArray = [1, 2, 3];
+let nuevoArray = [...miArray]; //le estas colocando a ese array el array anterior pracicamente igualandolo
+nuevoArray.push(5); //al array le estas colocando al final el numero 5 
+let otroArray = [].concat(miArray) //otra manera de asignar el array entero
 
 
 
