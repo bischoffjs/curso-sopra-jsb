@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1>Titulo 1</h1>
+    <h2>Titulo 2</h2>
+    <h6>Titulo 3</h6>
+    <!-- Salto de linea en blanco -->
+    <br>
+    <!-- Liena horizontal -->
+    <hr>
+    <p>Un parrafo de <br>
+        multiples<br>
+        lineas</p>
+    <div>1</div>
+    <div>2</div>
+    <!-- Etiquetas de linea -->
+    <a href="#ultimo-parrafo">Ir al parrafo</a>
+    <a href="http://www.google.es" target="_blank"> Google</a>
+    <p id="ultimo-parrafo">Poulet tikka masala hahaha potatoooo tatata bala tu pepete. Belloo! ti aamoo! Jeje hana dul
+        sae bee do bee do bee
+        do
+        butt poopayee la bodaaa. Jeje po kass jeje poulet tikka masala para tú tank yuuu! Hana dul sae. Po kass la
+        bodaaa
+        belloo! Bee do bee do bee do hahaha. Hana dul sae gelatooo hahaha pepete daa po kass poopayee.</p>
+    <!-- Lista con Viñetas -->
+    <ul>
+        <li>Harina</li>
+        <li>Leche</li>
+        <li>Arroz</li>
+        <li>Coca-Cola</li>
+    </ul>
+    <!-- Lista enumerada -->
+    <ol>
+        <li>Paso 1</li>
+        <li>Paso 2</li>
+        <li>Paso 3</li>
+    </ol>
+    <!-- Tablas  -->
+    <!-- filas son con tr y columnas td -->
+    <table>
+        <!-- Cabecera -->
+        <!-- th es la columna hace una fila en negrita como titulito -->
+        <thead>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>F1 C1</td>
+                <td>F1 C2</td>
+                <td rowspan="2">F1 C3</td>
+            </tr>
+            <tr>
+                <td>F2 C1</td>
+                <td>F2 C2</td>
+                <!-- <td>F2 C3</td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total:</td>
+                <td>20</td>
+            </tr>
+        </tfoot>
+    </table>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/At_sign.svg/800px-At_sign.svg.png" alt="Arroba">
+
+    <form action="micontrolador.rb" method="GET">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="">Nombre</label>
+            <input type="text">
+        </fieldset>
+        <fieldset>
+            <legend>Datos del Pago</legend>
+            <label for="">Num. Tarjeta</label>
+            <input type="text">
+        </fieldset>
+        <!-- <input type="number" value="20">
+    <input type="color" value="#ccddcc">
+    <input type="date"> -->
+
+        <fieldset>
+            <input type="checkbox" name="skills" value="js">JS
+            <input type="checkbox" name="skills" value="js">Angular
+            <input type="checkbox" name="skills" value="js">Ruby
+        </fieldset>
+        <fieldset>
+            <input type="radio" name="opcion" value="si" checked>Si
+            <input type="radio" name="opcion" value="no">No
+        </fieldset>
+        <input type="password">
+        <input type="email" required placeholder="a@a.es">
+        <input name="miURL" type="url">
+        <button type="submit">Enviar</button>
+    </form>
+    <marquee behavior="" direction="">Esto no se usa ya</marquee>
+
+
+
+</body>
+
+</html>
