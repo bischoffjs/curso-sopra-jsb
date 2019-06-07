@@ -7,8 +7,20 @@
 #contenedor {
     background-color:  orange;
     width: 700px;
-    height: 400px;
-    /* display: flex; */
+    /* height: 400px; */
+    display: flex;
+    flex-wrap: wrap;
+    /* centrarlo verticalmente */
+    align-items: center;
+    /* centrarlo horizontal centrado */
+    /* justify-content: center;
+    justify-content: space-around;*/
+    /* justify-content: space-between; */
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+
 }
 
 .item {
@@ -17,12 +29,24 @@
     background-color: blue;
     border: 1px solid white;
     color: white;
+    order: 2;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
-html body p {
+.item.preferido {
+    order: 1;
+}
+
+.item.castigado {
+    order: 9;
+}
+
+/* html body p {
     color: blue;
 }
 
 html p {
     color: red !important;
-}
+} */

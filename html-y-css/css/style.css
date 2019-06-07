@@ -1,0 +1,164 @@
+/*Selectores*/
+/*Selector Global: a todos los elementos*/
+
+/* * {
+    text-decoration: line-through;
+} */
+
+/*Selector de etiquetas: a todos los elementos h1, p o el que indiques*/
+
+h1, p {
+    text-align: center;
+}
+
+/*De ID: Al elemento que tiene el id importante*/
+
+#input-valido {
+    border: 1px solid yellowgreen;
+}
+
+/* De Clase: a los elementos que tienen la clase importante */
+
+.importante {
+    background-color: yellow;
+    color: red;
+}
+
+/*De etiqueta + clase: a los elementos p que tienen la clase importante*/
+
+p.importante {
+    color: blue;
+}
+
+/*De clase+clase+[...clases]: que tengan las clases indicadas*/
+
+.titulo.importante {
+    text-decoration: underline blue;
+    text-decoration-style: dashed;
+}
+
+/*Hijo directo: el elemento esta un nivel dentro del elemento padre*/
+
+div > p {
+    font-size: 30px;
+}
+
+/*Descendiente: a los elementos que estan dentro de otro(hijos directos, nietos, bisnietos...)*/
+
+ul a {
+    text-decoration: none;
+}
+
+/*Conj atributo: tiene el atributo disbled*/
+
+input[disabled] {
+    background-color: darkgray;
+}
+
+/*Enlaces que sean igual a*/
+a[href='www.netflix.com'] {
+    color: red;
+}
+
+/*Enlaces quen contengan*/
+
+a[href*='a'] {
+    color:yellowgreen;
+}
+
+/*Enlaces quen terminen*/
+
+a[href^='http'] {
+    background-color:green;
+}
+/*Enlaces quen terminen*/
+
+a[href$='.es'] {
+    text-decoration: underline;
+}
+
+/*Pseudo-clases: cuando el elemento coge un estado (hover, active, disabled, focus, visited...*/
+h1:hover {
+    font-size:40px;
+}
+
+/**/
+ input:focus {
+     border: 3px dashed #caff07
+ }
+
+ button:not([type="button"]){
+     border-radius: 10px;
+     background-color: orange;
+     font-weight: bold;
+     font-style: italic;
+     color: white;
+     border: 1px solid blue;
+     height: 30px;
+}
+
+button:not([type="button"]):hover {
+    color: orange;
+    background-color: white;
+}
+
+h2 {
+    text-shadow: 10px 20px 10px black;
+}
+
+#con-sombra {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px black;
+}
+
+ul > li {
+    list-style:none;
+    display:inline;
+    /* margin-top: 30px;
+    margin-bottom: 25px; */
+    margin-right: 30px;
+    margin-left: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid black;
+
+}
+
+/*Transformaciones*/
+
+img {
+    width: 30vh;
+    /* transform: rotate(90deg) translate(0px, 20px); */
+    /* transform: skew(30deg); */
+    /* transform: scale(2,0.5); */
+    transition: width 1s;
+}
+
+img:hover{
+    transition: width 1s;
+    width: 60vh;
+}
+
+/*Animaciones*/
+@keyframes zoom{
+    from{
+        width: 0px;
+        height: 0px;
+        background-color: red;
+    }
+    to{
+        width: 300px;
+        height: 300px;
+        background-color: white;
+    }
+}
+
+div.caja1:hover{
+    width: 200px;
+    height: 200px; 
+    border: 1px solid blue;
+    animation-name: zoom;
+    animation-duration: 2s;
+}

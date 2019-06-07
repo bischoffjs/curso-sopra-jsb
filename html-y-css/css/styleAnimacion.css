@@ -1,0 +1,112 @@
+h1.primero {
+    text-align: center;
+    color: blue;
+    animation-name: swing;
+    animation-duration: 1s;
+}
+
+h1.segundo {
+    text-align: center;
+    color: blue;
+    animation-name: heart-beat;
+    animation-duration: 1s;
+}
+
+/*Animaciones*/
+@keyframes swing{
+    0%{
+        transform: rotate(5deg);
+    }
+    25%
+    {
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    75%
+    {
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+      
+      transform: scale(1);
+    }
+  
+    25% {
+    
+      transform: scale(2);
+    }
+  
+    50% {
+      
+      transform: scale(1);
+    }
+  
+    75% {
+     
+      transform: scale(2);
+    }
+  
+    100% {
+    
+      transform: scale(1);
+    }
+  }
+
+  @keyframes altura{
+    from{
+        height: 250px;
+    }
+    to{
+        height: 300px;
+    }
+}
+
+
+  
+div.caja1 {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    margin: auto;
+    border: 1px solid black;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+  img {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      display:block;
+      margin:auto;
+  }
+
+  h4 {
+    text-align: center;
+    color: black;
+  }
+
+  div.caja1:hover{
+    transition:  height 1s, transform 1s;    
+    height: 44vh;
+}
+
+button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
