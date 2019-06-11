@@ -4,7 +4,7 @@ let btnGuardar = document.getElementById('btn-guardar-genero');
 console.log(btnGuardar);
 console.dir(btnGuardar);
 
-btnGuardar.onclick = saludar;
+// btnGuardar.onclick = saludar;
 // btnGuardar.addEventListener('click', saludar);
 // btnGuardar.addEventListener('click', function(e){
 //     console.log('Has pulsado un boton');
@@ -19,26 +19,43 @@ btnGuardar.addEventListener('click', (event) => {
     let nuevoGenero = inputGenero.value.trim();
     if (nuevoGenero) {
         //Guardamos el genero 
-        saveGenero(nuevoGenero);
-    }
-});
-//con addeventlistener no se pone ON
-function saveGenero(genero) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://ejemplos-dc1c1.firebaseio.com/generos.json');
-    xhr.addEventListener('readystatechange', () => {
-        if (xhr.status === 200 && xhr.readyState === 4) {
-            Swal.fire({
+        saveGenero(nuevoGenero).then(() => {
+            return Swal.fire({
                 text: 'Genero Guardado!',
                 type: 'success'
             });
-        }
-    });
-    xhr.send(JSON.stringify(genero));
+        })
+        .then(() => {
+            location.href = 'http://localhost:8080/admin/peliculas.html';
+        });
+    }
+});
+
+function saveGenero(genero) {
+    return fetch('https://ejemplos-dc1c1.firebaseio.com/generos.json', {
+        method: 'POST',
+        body: JSON.stringify(genero)
+    })
 }
 
 
+// //con addeventlistener no se pone ON
+// function saveGenero(genero) {
+//     let xhr = new XMLHttpRequest();
+//     xhr.open('POST', 'https://ejemplos-dc1c1.firebaseio.com/generos.json');
+//     xhr.addEventListener('readystatechange', () => {
+//         if (xhr.status === 200 && xhr.readyState === 4) {
+//             Swal.fire({
+//                 text: 'Genero Guardado!',
+//                 type: 'success'
+//             });
+//         }
+//     });
+//     xhr.send(JSON.stringify(genero));
+// }
 
-function saludar() {
-    console.log('Hola');
-}
+
+
+// function saludar() {
+//     console.log('Hola');
+// }

@@ -22,7 +22,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <!-- <script>console.log("el js funciona")</script> -->
+    <script src="js/app.js"></script>
     <style>
         p {
             display: block;
@@ -42,11 +44,18 @@
 
     </header>
     <main>
-        <section>
+        <div>
+            <input type="checkbox" name="edicion" id="edicion">
+            Eliminar?
+        </div>
+        <div id ="secciones-peliculas">
+
+        </div>
+        <!-- <section>
             <article>
                 <p>Gestione las peliculas y los generos disponibles</p>
             </article>
-        </section>
+        </section> -->
     </main>
     <aside>
 
@@ -57,7 +66,7 @@
     <!-- <button class="btn btn-info">Guardar</button> -->
     <!-- importamos un archivo javascript puede ser usado en el head body o fuera-->
     <!-- , se coloca al final cuando depende del html sino al principio -->
-    <script src="app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
 </body>
 
 </html>

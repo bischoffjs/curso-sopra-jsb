@@ -22,18 +22,22 @@
                 <form>
                     <div>
                         <label for="input-genero">Genero:</label>
-                        <input type="text" id="input-genero">
+                        <!-- <input type="text" id="input-genero"> -->
+                        <select name = "generos" id="desplegable-generos">
+                            <option value="0">-</option>
+                        </select>
                     </div>
                     <div>
                             <label for="input-pelicula">Pelicula:</label>
                             <input type="text" id="input-pelicula">
                         </div>
                         <button type="submit" id="btn-guardar">Guardar</button>
+                        <button type="submit" id="btn-guardar-redirect">Guardar e ir a Inicio</button>
                 </form>
             </main>
             <footer>
                 <p>Pagina hecha por : Jorge Socas</p>
             </footer>
-            <script src="../js/peliculas.js"></script>
+            <script src="../js/peliculasPromesas.js"></script>
 </body>
 </html>
