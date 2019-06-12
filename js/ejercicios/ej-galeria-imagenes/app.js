@@ -21,7 +21,7 @@ function pasarFoto() {
 }
 
 function retrocederFoto() {
-    if (posicionActual <= 0) {
+    if (posicionActual <= 0) {  
         posicionActual = IMAGENES.length - 1;
     } else {
         posicionActual--;
