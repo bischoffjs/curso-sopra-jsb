@@ -1,5 +1,9 @@
 export class Oferta {
-    constructor(private _titulo: string, private _descripcion: string, private _logo: string) { }
+    constructor(private _id: number, private _titulo: string, private _descripcion: string, private _logo: string, private _inscrito: boolean = false) { }
+
+    get id(): number {
+        return this._id;
+    }
 
     get titulo(): string {
         return this._titulo;
@@ -21,6 +25,14 @@ export class Oferta {
 
     set logo(val: string) {
         this._logo = val;
+    }
+
+    get inscrito(): boolean {
+        return this._inscrito;
+    }
+
+    set inscrito(val: boolean) {
+        this._inscrito = val;
     }
 }
 

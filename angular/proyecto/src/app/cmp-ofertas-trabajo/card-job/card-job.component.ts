@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Oferta } from '../oferta';
 
 @Component({
@@ -9,9 +9,15 @@ import { Oferta } from '../oferta';
 export class CardJobComponent implements OnInit {
 
   @Input() oferta: Oferta;
+  @Output() inscripcion = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  inscribirEnOferta() {
+    // this.oferta.inscrito = !this.oferta.inscrito;
+    this.inscripcion.emit(this.oferta.id);
   }
 
 }
