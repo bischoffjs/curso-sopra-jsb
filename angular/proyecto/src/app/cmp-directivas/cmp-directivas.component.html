@@ -1,0 +1,38 @@
+<h1>Directivas</h1>
+<h2>De atributo</h2>
+
+<p [ngClass]="{letraAzul: aplicarLetraAzul, subrayado: true}">Texto con letra azul y subrayado</p>
+<button type="button" (click)="aplicarLetraAzul = !aplicarLetraAzul">Pintar letra</button>
+
+
+<p [ngStyle]="{backgroundColor: micolor, color: 'orange'}">Texto con letra azul y subrayados</p> -->
+<input type="text" (input)="aplicar($event)">
+
+<p appMarcar >Texto marcado</p>
+<p appMarcar color="blue">Texto marcado</p>
+<p appMarcar color="orange">Texto marcado</p>
+
+
+<input appPowerMode type="text">
+
+<h2>Estructurales</h2>
+
+<p *ngIf="aplicarLetraAzul">Se muestra: aplicarLetraAzul == true</p>
+<ng-template #parteElse>
+    <p>Se muestra (else)</p>
+</ng-template>
+
+
+<ul>
+    <li *ngFor="let item of colores; let pos = index"> {{pos+1}} : {{item}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of pelicula | keyvalue"> {{item.key}} : {{item.value}}</li>
+</ul>
+
+<div [ngSwitch]="miColor">
+    <p *ngSwitchCase="'black'">El color es negro</p>
+    <p *ngSwitchCase="'white'">El color es negro</p>
+    <p>El color es gris</p>
+</div>
