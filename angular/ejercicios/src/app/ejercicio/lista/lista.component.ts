@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Tarea } from '../tarea';
+import { ServiceTareaService } from '../service-tarea.service';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
+  tareas: Array<Tarea> = [];
+  constructor(private _service: ServiceTareaService) { }
 
   ngOnInit() {
+    this.tareas = this._service.tareas;
+    this._service.tareasCambiadas.subscribe((nuevaLista) => {
+      this.tareas = nuevaLista;
+    });
   }
 
 }

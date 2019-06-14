@@ -1,3 +1,4 @@
-<p>
-  lista works!
-</p>
+<h1>Lista de Tareas</h1>
+<div class = "tareaList">
+    <app-tarea *ngFor="let item of tareas" [tarea] = "item">  </app-tarea>
+  </div>

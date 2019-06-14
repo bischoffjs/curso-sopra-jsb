@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Tarea} from '../tarea';
+import { ServiceTareaService } from '../service-tarea.service';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  @Output() tarea = new EventEmitter<Tarea>();
+
+  constructor(private _datosService: ServiceTareaService) { }
 
   ngOnInit() {
+  }
+
+  addTarea(tarea) {
+    let numeroAleatorio = Math.round(Math.random() * 50);
+    this._datosService.addTarea(new Tarea(numeroAleatorio, tarea, false));
   }
 
 }
